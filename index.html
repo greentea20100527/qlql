@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f8ed" />
+    <title>小恐龍跑酷</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="game.js" defer></script>
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="game-header">
+        <div>
+          <p class="eyebrow">HTML5 CANVAS GAME</p>
+          <h1>小恐龍跑酷</h1>
+        </div>
+        <div class="score-card" aria-live="polite">
+          <span class="score-label">分數</span>
+          <span id="score" class="score-value">00000</span>
+        </div>
+      </header>
+
+      <section class="game-frame" aria-label="小恐龍與貓咪跑酷遊戲">
+        <canvas id="game-canvas" aria-label="遊戲畫面"></canvas>
+        <div id="game-overlay" class="game-overlay">
+          <div class="overlay-card">
+            <p id="overlay-kicker" class="overlay-kicker">準備好了嗎？</p>
+            <h2 id="overlay-title">出發去冒險！</h2>
+            <p id="overlay-message">和貓咪一起跳過障礙，看看能跑多遠。</p>
+            <button id="start-button" class="start-button" type="button">開始遊戲</button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="game-help">
+        <span><kbd>空白鍵</kbd> 或 <kbd>↑</kbd> 跳躍</span>
+        <span>手機上點擊畫面即可跳躍</span>
+      </footer>
+    </main>
+  </body>
+</html>
