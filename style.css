@@ -135,6 +135,15 @@ h1 {
   font-size: clamp(1.35rem, 4vw, 1.8rem);
 }
 
+.overlay-art {
+  display: block;
+  width: 104px;
+  height: 104px;
+  margin: 12px auto 4px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
 .overlay-card p:not(.overlay-kicker) {
   margin: 10px 0 18px;
   color: #718373;
