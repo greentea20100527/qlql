@@ -36,6 +36,9 @@ const gravity = 1900;
 const jumpVelocity = -690;
 const baseSpeed = 300;
 const maxSpeed = 620;
+const jumpSound = new Audio("blackout_dulcimer1.wav");
+jumpSound.preload = "auto";
+jumpSound.volume = 0.55;
 
 function resizeCanvas() {
   const bounds = canvas.getBoundingClientRect();
@@ -91,6 +94,8 @@ function jump() {
   if (!game.player.jumping) {
     game.player.velocityY = jumpVelocity;
     game.player.jumping = true;
+    jumpSound.currentTime = 0;
+    jumpSound.play().catch(() => {});
   }
 }
 
